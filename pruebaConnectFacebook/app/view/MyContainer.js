@@ -31,6 +31,22 @@ Ext.define('MyApp.view.MyContainer', {
                 xtype: 'button',
                 handler: function(button, event) {
                     try{
+
+
+
+
+                        FB.getLoginStatus(function(response) {
+                            if (response.status == 'connected') {
+                                alert('logged in');
+                            } else {
+                                alert('not logged in');
+                            }
+                        });
+
+
+
+
+
                         FB.getLoginStatus(function(response) {
                             if (response.status=="connected") {
                                 var url = '/me?fields=name,email';
