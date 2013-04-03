@@ -1,0 +1,47 @@
+{
+    "name": "pruebaConnectFacebook",
+    "settings": {
+        "spacesToIndent": 4,
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "urlPrefix": "",
+        "exportPath": "",
+        "buildShouldOverwriteIndex": true
+    },
+    "xdsVersion": "2.2.0",
+    "xdsBuild": 908,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000499,
+    "framework": "touch21",
+    "topInstanceFileMap": {
+        "802223ee-432a-4aaa-9dfa-88318ebddb7f": {
+            "paths": [
+                "metadata/view/MyContainer",
+                "app/view/override/MyContainer.js",
+                "app/view/MyContainer.js"
+            ],
+            "className": "MyContainer"
+        },
+        "bd72bd7b-3447-4c69-8463-3d97f1ba78b5": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "802223ee-432a-4aaa-9dfa-88318ebddb7f"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "bd72bd7b-3447-4c69-8463-3d97f1ba78b5"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

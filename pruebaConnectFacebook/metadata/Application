@@ -1,0 +1,65 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "views": [
+            "MyContainer"
+        ],
+        "name": "MyApp"
+    },
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "launch",
+                "fn": "launch",
+                "implHandler": [
+                    "this.facebookAppId = '343895802382049';",
+                    "",
+                    "//---------------------------------------------CODIGO DE INICIALIZACION----------------------------------------------------------",
+                    "//codigo de facebook:",
+                    "try{",
+                    "    //FACEBOOK SDK",
+                    "    FB.init({ appId: \"343895802382049\", nativeInterface: CDV.FB, useCachedDialogs: false });",
+                    "    testAPI = function(){",
+                    "        FB.api('/me', function(response) {",
+                    "            Ext.Msg.alert('Aviso', 'Sesión iniciada correctamente '+response.name, Ext.emptyFn);",
+                    "        });",
+                    "    };",
+                    "    //login function",
+                    "    login = function() {",
+                    "        //    alert(\"fgey\");",
+                    "        FB.login(function(response) {",
+                    "            if (response.authResponse) {",
+                    "                // connected",
+                    "                //alert('Su información: '+response.name+','+response.authResponse.userID+','+response.authResponse.accessToken+','+response.authResponse.expiresIn+','+response.authResponse.signedRequest);",
+                    "                testAPI();",
+                    "            } else {",
+                    "                Ext.Msg.alert('Aviso', 'Sesión no iniciada.', Ext.emptyFn);",
+                    "            }",
+                    "        });",
+                    "    };",
+                    "}",
+                    "catch(e){",
+                    "    Ext.Msg.alert('Aviso', 'No se pudo conectar con FB', Ext.emptyFn);",
+                    "}",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "designerId": "b2fa3573-9dc3-41e3-9cfd-73a41ddeceb9"
+        }
+    ]
+}

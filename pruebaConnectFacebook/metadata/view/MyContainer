@@ -1,0 +1,133 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyContainer",
+        "designer|initialView": true,
+        "layout": "fit"
+    },
+    "designerId": "802223ee-432a-4aaa-9dfa-88318ebddb7f",
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "designer|userClassName": "MyTitleBar",
+                "title": "FacebookConnect"
+            },
+            "designerId": "3974c722-9317-4753-8244-49e7e8dbfdce"
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyButton",
+                "text": "Connect / Log In"
+            },
+            "designerId": "67f725b8-5ab5-4cfb-9d49-04bfaa845eea",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "handler",
+                        "fn": "handler",
+                        "designer|params": [
+                            "button",
+                            "event"
+                        ],
+                        "implHandler": [
+                            "try{",
+                            "    FB.getLoginStatus(function(response) {",
+                            "        if (response.status==\"connected\") {",
+                            "            var url = '/me?fields=name,email';",
+                            "            FB.api(url, function(response) {",
+                            "                //se envia por extraParams la info del usuario de FB",
+                            "",
+                            "                //variables para enviar por extraParams",
+                            "                alert(response.name);",
+                            "                alert(response.id);",
+                            "                alert(response.email);",
+                            "                alert(response.birthday);",
+                            "                alert(response.picture);",
+                            "            });",
+                            "",
+                            "            Ext.Msg.alert('Aviso', 'Su sesión ya está iniciada y autorizada.', Ext.emptyFn);",
+                            "",
+                            "        } else if (response.status==\"not_authorized\") {",
+                            "            // not_authorized",
+                            "            //login();",
+                            "            ",
+                            "            ///",
+                            "            alert(\"hteryh\");",
+                            "            var redirectUrl = Ext.Object.toQueryString({",
+                            "                redirect_uri: window.location.protocol + \"//\" + window.location.host + window.location.pathname,",
+                            "                client_id: MyApp.app.facebookAppId,",
+                            "                response_type: 'token'",
+                            "            });",
+                            "\t\t\tthis.setHtml([",
+                            "\t\t\t'<h2>Welcome to Jog with Friends</h2>',",
+                            "\t\t\t'<p>With this app you can log your runs and share your progress with your friends</p>',",
+                            "\t\t\t'<p>In order to use Jog with Friends you must sign in with your Facebook account.</p>',",
+                            "\t\t\t'<a class=\"fbLogin\" href=\"https://m.facebook.com/dialog/oauth?' + redirectUrl + '\"></a>',",
+                            "\t\t\t'<div class=\"fb-facepile\" data-app-id=\"' + MyApp.app.facebookAppId + '\" data-max-rows=\"2\" data-width=\"300\"></div>'",
+                            "\t\t\t].join(''));",
+                            "\t\t\tFB.XFBML.parse(Ext.getCmp(\"containerPrueba\"));",
+                            "\t\t\t///",
+                            "",
+                            "            ",
+                            "        } else {",
+                            "            // not_logged_in",
+                            "            //login();",
+                            "            ",
+                            "            ",
+                            "            ///",
+                            "            alert(\"hteryh\");",
+                            "            var redirectUrl = Ext.Object.toQueryString({",
+                            "                redirect_uri: window.location.protocol + \"//\" + window.location.host + window.location.pathname,",
+                            "                client_id: MyApp.app.facebookAppId,",
+                            "                response_type: 'token'",
+                            "            });",
+                            "\t\t\tthis.setHtml([",
+                            "\t\t\t'<h2>Welcome to Jog with Friends</h2>',",
+                            "\t\t\t'<p>With this app you can log your runs and share your progress with your friends</p>',",
+                            "\t\t\t'<p>In order to use Jog with Friends you must sign in with your Facebook account.</p>',",
+                            "\t\t\t'<a class=\"fbLogin\" href=\"https://m.facebook.com/dialog/oauth?' + redirectUrl + '\"></a>',",
+                            "\t\t\t'<div class=\"fb-facepile\" data-app-id=\"' + MyApp.app.facebookAppId + '\" data-max-rows=\"2\" data-width=\"300\"></div>'",
+                            "\t\t\t].join(''));",
+                            "\t\t\tFB.XFBML.parse(Ext.getCmp(\"containerPrueba\"));",
+                            "\t\t\t///",
+                            "            ",
+                            "            ",
+                            "            ",
+                            "        }",
+                            "    },{ perms: 'email' });",
+                            "    }",
+                            "    catch(e){",
+                            "        Ext.Msg.alert('Aviso', 'No se pudo conectar con Facebook.', Ext.emptyFn);",
+                            "    }"
+                        ]
+                    },
+                    "designerId": "2749497e-a1d1-4490-83d6-ea2d0cd80727"
+                }
+            ]
+        }
+    ]
+}
