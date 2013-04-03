@@ -17,6 +17,7 @@ Ext.define('MyApp.view.MyContainer', {
     extend: 'Ext.Container',
 
     config: {
+        id: 'containerPrueba',
         layout: {
             type: 'fit'
         },
@@ -39,7 +40,7 @@ Ext.define('MyApp.view.MyContainer', {
                                     //variables para enviar por extraParams
                                     alert(response.name);
                                     alert(response.id);
-                                    alert(response.email);
+                                    alert(response.email);	
                                     alert(response.birthday);
                                     alert(response.picture);
                                 });
