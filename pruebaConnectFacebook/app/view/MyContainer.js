@@ -93,40 +93,6 @@ Ext.define('MyApp.view.MyContainer', {
 
                 },
                 text: 'Connect / Log In'
-            },
-            {
-                xtype: 'panel',
-                height: '70%',
-                hidden: true,
-                id: 'panelFacebookDisplay',
-                left: '10%',
-                top: '10%',
-                width: '80%',
-                layout: {
-                    type: 'fit'
-                },
-                items: [
-                    {
-                        xtype: 'titlebar',
-                        docked: 'top',
-                        title: 'FacebookCnct'
-                    },
-                    {
-                        xtype: 'button',
-                        handler: function(button, event) {
-                            Ext.getCmp("panelFacebookDisplay").setHidden(1);
-                        },
-                        docked: 'bottom',
-                        ui: 'confirm',
-                        text: 'Esconder'
-                    },
-                    {
-                        xtype: 'container',
-                        layout: {
-                            type: 'fit'
-                        }
-                    }
-                ]
             }
         ]
     }
