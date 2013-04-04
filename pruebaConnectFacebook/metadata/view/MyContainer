@@ -200,7 +200,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "html": "<div id=\"log\"></div>",
+                        "html": null,
                         "designer|userClassName": "MyContainer1",
                         "layout": "fit"
                     },

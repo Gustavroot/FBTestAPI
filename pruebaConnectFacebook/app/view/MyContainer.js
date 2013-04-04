@@ -122,7 +122,6 @@ Ext.define('MyApp.view.MyContainer', {
                     },
                     {
                         xtype: 'container',
-                        html: '<div id="log"></div>',
                         layout: {
                             type: 'fit'
                         }
