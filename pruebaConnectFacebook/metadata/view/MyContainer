@@ -114,7 +114,7 @@
                             "    }",
                             "",
                             "",
-                            "Ext.getCmp(\"panelFacebookDisplay\").setHidden(0);",
+                            "//Ext.getCmp(\"panelFacebookDisplay\").setHidden(0);",
                             ""
                         ]
                     },

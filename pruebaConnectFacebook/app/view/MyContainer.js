@@ -89,7 +89,7 @@ Ext.define('MyApp.view.MyContainer', {
                         }
 
 
-                        Ext.getCmp("panelFacebookDisplay").setHidden(0);
+                        //Ext.getCmp("panelFacebookDisplay").setHidden(0);
 
                 },
                 text: 'Connect / Log In'
