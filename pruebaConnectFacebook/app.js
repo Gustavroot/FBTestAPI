@@ -39,25 +39,40 @@ Ext.application({
             //login function
             login = function() {
                 //    alert("fgey");
+                /*
                 FB.login(function(response) {
-                    if (response.authResponse) {
-                        // connected
-                        //alert('Su información: '+response.name+','+response.authResponse.userID+','+response.authResponse.accessToken+','+response.authResponse.expiresIn+','+response.authResponse.signedRequest);
-                        testAPI();
-                    } else {
-                        Ext.Msg.alert('Aviso', 'Sesión no iniciada.', Ext.emptyFn);
-                    }
-                });
-            };
-        }
-        catch(e){
-            Ext.Msg.alert('Aviso', 'No se pudo conectar con FB', Ext.emptyFn);
-        }
+                if (response.authResponse) {
+                // connected
+                //alert('Su información: '+response.name+','+response.authResponse.userID+','+response.authResponse.accessToken+','+response.authResponse.expiresIn+','+response.authResponse.signedRequest);
+                testAPI();
+            } else {
+                Ext.Msg.alert('Aviso', 'Sesión no iniciada.', Ext.emptyFn);
+            }
+        });
+        */
+
+        FB.login(
+        function(response) {
+            if (response.session) {
+                alert('logged in');
+            } else {
+                alert('not logged in');
+            }
+        },
+        { scope: "email" }
+        );
+
+
+    };
+    }
+    catch(e){
+    Ext.Msg.alert('Aviso', 'No se pudo conectar con FB', Ext.emptyFn);
+    }
 
 
 
 
-        Ext.create('MyApp.view.MyContainer', {fullscreen: true});
+    Ext.create('MyApp.view.MyContainer', {fullscreen: true});
     }
 
 });

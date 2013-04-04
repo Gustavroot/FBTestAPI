@@ -18,6 +18,25 @@
                             "id": "2749497e-a1d1-4490-83d6-ea2d0cd80727"
                         }
                     ]
+                },
+                {
+                    "id": "c9303313-79e1-4833-86a9-046b33f7e965",
+                    "cn": [
+                        {
+                            "id": "c826affb-4f1f-4706-8702-6dea7a8934e0"
+                        },
+                        {
+                            "id": "857eb45e-705a-4bce-b95c-b183c0443cc3",
+                            "cn": [
+                                {
+                                    "id": "29e20436-e12f-418c-b5a9-428031adc43c"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "7f4a0cf5-f855-4735-a17b-b4ee81bff877"
+                        }
+                    ]
                 }
             ]
         },
@@ -35,11 +54,11 @@
         "topInstance": null
     },
     "inspectorState": {
-        "topInstance": "802223ee-432a-4aaa-9dfa-88318ebddb7f",
-        "selectedInstance": "2749497e-a1d1-4490-83d6-ea2d0cd80727"
+        "topInstance": "application",
+        "selectedInstance": "b2fa3573-9dc3-41e3-9cfd-73a41ddeceb9"
     },
     "codeState": {
-        "topInstance": "802223ee-432a-4aaa-9dfa-88318ebddb7f"
+        "topInstance": "application"
     },
     "editMode": "code"
 }
